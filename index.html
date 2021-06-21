@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="js/filere.js"></script>
+<title>Antril Prayer App</title>
+<body>
+
+
+<div>
+
+<div class="split left">
+  <div class="centered" ng-app="myApp" ng-controller="MyCtrl as vm">
+    <input id= "song_search_button" type="button" ng-click="vm.openWindow()" value="Search Song" />
+  </div>
+</div>
+
+
+<div class="split center">
+  <div class="centered">
+    
+  </div>
+</div>
+
+<div class="split center2">
+  <div class="centered">
+ 
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+   
+  </div>
+</div>
+
+</div>
+
+<style>
+
+/* Split the screen in half */
+.split {
+  height: 92%;
+  width: 12%;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 1%;
+  background-color: green;
+}
+
+/* Control the left side */
+.center {
+  left: 14%;
+  width: 30%;
+  background-color: green;
+}
+
+
+/* Control the left side */
+.center2 {
+  left: 45%;
+  width: 34%;
+  background-color: green;
+}
+
+
+
+/* Control the right side */
+.right {
+  right: 0;
+  width: 20%;
+  background-color: green;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+
+
+</style>
+
+
+</body>
+</html>

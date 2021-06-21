@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app=SearchApp>
+
+  <head>
+    <script src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
+    <script src="../js/search_song.js"></script>
+  </head>
+
+  <body ng-controller="songCtrl">      
+    <table>
+        <tr>
+            <td align="right">Search :</td>
+            <td><input ng-model="query[queryBy]" /></td>
+        </tr>           
+        <tr>
+            <td align="right">Search By :</td>
+            <td>
+                <select ng-model="queryBy">
+                    <option value="$"></option>
+                    <option value="songno">songno</option>
+                    <option value="book">book</option>
+                    <option value="category">category</option>
+                    <option value="title">title</option>
+                </select>   
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <div>
+        <table>
+            <tr>
+                <th>Song No</th>
+                <th>Book</th>
+                <th>Category</th>
+                <th>Title</th>
+            </tr>
+            <tr ng-repeat="song in songlist | filter:query">
+                <td>{{song.songno}}</td>
+                <td>{{song.book}}</td>
+                <td>{{song.category}}</td>
+                <td>{{song.title}}</td>
+            </tr>
+        </table>
+    </div>
+  </body>
+
+</html>
